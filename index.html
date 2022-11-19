@@ -4,25 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bird Songs</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
 <body>
+<div id="birdShow">
+    <h1 style="background-color: Gold; padding: 40px;  ">New York Botanical Garden
+        
+    <p style="font-size:medium;"><br>Our 250 acres play host to a wide variety of migrating and resident bird populations,
+     and taking time to observe them in their natural habitat. </p></h1>
+</div>
     <nav>
         <ul>
             <li>
-                <a href="index.html" class="current-page">home</a>
+                <a href="index.html" class="current-page">Home</a>
             </li>
             <li>
-                <a href="meadowlark.html">meadowlark</a>
+                <a href="meadowlark.html">Meadowlark</a>
             </li>
             <li>
-                <a href="canary.html">canary</a>
+                <a href="canary.html">Canary</a>
             </li>
             <li>
-                <a href="rooster.html">most elusive bird</a>
+                <a href="rooster.html">Rooster</a>
+            </li>
+            <li>
+                <a href="Dekalb.html">Dekalb Amberlink</a>
             </li>
         </ul>
     </nav>
-    <!-- Add main tag here -->
+   <br>
+    <main>
+         <!-- Birds Image Gallary -->
+       <div class="center" style="background-color: ">
+          <img class="mySlides" src="assets/images/western-meadowlark.jpg" style="width:70%; height: 50%;">
+          <img class="mySlides" src="assets/images/amberlink-chicken-2.jpg" style="width:70%; height: 50%;">
+          <img class="mySlides" src="assets/images/canary1.jpg" style="width:70%; height: auto;">
+          <img class="mySlides" src="assets/images/rooster3.jpeg" style="width:70%; height: 70%; ">
+        </div>
+        <br> 
+    <br>
+    <h3>Join an expert bird guide from NYC Audubon for a for a tour of NYBG's diverse landscape .</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table style="width:100%;text-align:left;border-collapse:collapse;background-color:PaleGoldenRod;">
+        <tr>
+         <th>Canary</th>
+          <th>Meadowlark</th>
+           <th>Amberlink</th>
+           <th>Rooster</th>                
+        </tr>  
+      </table>
+<br>
+<br>
+<br>
+
+   <!-- Birds Videos -->
+
+        <br>
+        <br>
+        <h1><u>Bird Videos</u></h1>
+        <br>
+        <br>
+        <div id="video-layout">
+            <div class="video">
+         <div id="vid-left">
+          <a href="canary.html"><h2>Canary</h2></a>
+          <iframe width="260" height="135" src="https://www.youtube.com/embed/kSEpQ6q3tt4" title="YouTube video player"
+         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen></iframe><br>
+          <a href="canary.html"><button class="btn btn-primary">Watch Video</button></a>
+            </div>
+        
+            <div id="vid-mid">
+          <a href="rooster.html"><h2>Rooster</h2></a>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/bpdmuDoV-lI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+          gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <a href="rooster.html"><button class="btn btn-primary">Watch Video</button></a>
+            </div>
+       
+        <div id="vid-right">
+          <a href="Dekalb.html"><h2>Dekalb</h2></a>
+          <iframe width="260" height="135" src="https://www.youtube.com/embed/1YyW7I89QG8" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+          encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <a href="Dekalb.html"><button class="btn btn-primary">Watch Video</button></a>
+        </div>
+       
+        <div id="vid-left">
+            <a href="meadowlark.html"><h2>Meadowlark</h2></a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3o0FC7aqg94" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="meadowlark.html"><button class="btn btn-primary">Watch Video</button></a>
+              </div>
+
+              <div id="vid-mid">
+                <a href="meadowlark.html"><h2>Meadowlark</h2></a>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3o0FC7aqg94" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <a href="meadowlark.html"><button class="btn btn-primary">Watch Video</button></a>
+                  </div>
+
+                  <div id="vid-right">
+                    <a href="meadowlark.html"><h2>Meadowlark</h2></a>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3o0FC7aqg94" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a href="meadowlark.html"><button class="btn btn-primary">Watch Video</button></a>
+                      </div>
+              </div>
+              </div>
+
+               <!-- Birds Image JavaScript-->
+              <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+                </script>
+    </main>
+  <br>
+  <br>
+  
+</div>
+</div> 
+</div>
+ <!-- Footer -->
+ <footer>
+    <p>New York Botanical Garden!</p>
+</footer>
+
 </body>
 </html>
